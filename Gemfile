@@ -74,3 +74,4 @@ gem 'carrierwave'
 gem 'httparty'
 gem "carrierwave"
 gem 'devise'
+gem 'fog'
