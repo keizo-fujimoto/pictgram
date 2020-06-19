@@ -7,7 +7,7 @@ unless Rails.env.development? || Rails.env.test?
       region: 'ap-northeast-1'
     }
 
-    config.fog_directory  = 'pictgram'
+    config.fog_directory  = 'techboostpictgram'
     config.cache_storage = :fog
   end
 end
