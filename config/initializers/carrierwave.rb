@@ -2,12 +2,12 @@ unless Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: 'AKIAZ3EFBBH4LZGLH6JG',
-      aws_secret_access_key: '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',
-      region: 'ap-northeast-1'
+      aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+      region: ENV['REGION']
     }
 
-    config.fog_directory  = 'techboostpictgram'
+    config.fog_directory  = ENV['FOG_DIRECTORY']
     config.cache_storage = :fog
   end
 end
